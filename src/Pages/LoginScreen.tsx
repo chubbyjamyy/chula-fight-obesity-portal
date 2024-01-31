@@ -13,12 +13,22 @@ import "./LoginScreen.css";
 import HeaderMenuBar from "../HeaderMenuBar";
 import Footer from "../Footer";
 import loginLogo from "../asset/loginLogo.png"
+import { useNavigate } from 'react-router-dom';
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleLogin = () => {};
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
+    navigate('/Dashboard');
+  };
 
   return (
     <div className="login-container">
@@ -34,7 +44,7 @@ export const LoginScreen = () => {
           }}
         >
           <img src={loginLogo}/>
-          <Box sx={{ mt: 1 }}>
+          <Box  component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -73,6 +83,7 @@ export const LoginScreen = () => {
                   backgroundColor: "#098484",
                 },
               }}
+              type="submit"
             >
               เข้าสู่ระบบ
             </Button>
