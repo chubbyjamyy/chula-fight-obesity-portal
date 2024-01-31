@@ -1,0 +1,31 @@
+.login-container {
+  background-image: url('../asset/HomeScreen.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh; /* Use min-height to ensure the background covers the full screen */
+  overflow: hidden; 
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 255);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Make the form take the full width of its container */
+  max-width: 400px; /* Set a maximum width for the form */
+}
+
+.login-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  text-align: center; /* Center-align the header text */
+}
+
+/* Responsive CSS for smaller screens */
+@media (max-width: 600px) {
+  .login-form {
+    max-width: 90%;
+  }
+}
+

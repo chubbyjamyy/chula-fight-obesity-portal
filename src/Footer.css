@@ -1,0 +1,91 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.text {
+    color: gray;
+}
+
+.column {
+    padding: 10px;
+    padding-left: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Adjust the styles of <p> tags */
+.column p {
+    margin: 3px 0;
+    text-align: left;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.container2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.icon {
+    position: absolute;
+    top: 10%;
+    transform: translateX(-55%);
+    padding-right: 30px;
+    width: 15px;
+    height:20px;
+}
+
+.iconTel {
+    position: absolute;
+    top: 20%;
+    transform: translateX(-55%);
+    padding-right: 30px;
+    width: 15px;
+    height:20px;
+}
+
+.tel{
+    padding-left: 20px;
+    padding-top: 6px;
+}
+
+.text2{
+    color: gray;
+    padding-top: 4px;
+}
+
+.openTime{
+    padding-left: 78px;
+}
+
+.email{
+    padding-left: 45px;
+}
+
+.green-strip {
+    background-color: #098484; /* Green background color */
+    height: 5px; /* Adjust the height as needed */
+}
