@@ -19,7 +19,7 @@
     color: gray;
 }
 
-.column {
+.column-footer {
     padding: 10px;
     padding-left: 150px;
     text-align: center;
@@ -30,7 +30,7 @@
 }
 
 /* Adjust the styles of <p> tags */
-.column p {
+.address-text {
     margin: 3px 0;
     text-align: left;
 }
@@ -89,3 +89,7 @@
     background-color: #098484; /* Green background color */
     height: 5px; /* Adjust the height as needed */
 }
+
+.text, .text2, .openTime, .email, .tel, address {
+    margin: 5px 0; /* Adjust the margin as needed to reduce spacing */
+  }

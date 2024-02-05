@@ -43,7 +43,7 @@ const UserFiltering = () => {
       <p>ผู้ใช้งานและสิทธิ์  /  รายการผู้ใช้งาน</p>
       <Box p={3} bgcolor={"white"}>
         <div className="two-column-container">
-          <div className="column">
+          <div className="column-filter-field">
             <div className="search-container">
               <div className="search-text">
                 <p>ค้นหา</p>
@@ -59,7 +59,7 @@ const UserFiltering = () => {
               onChange={handleTextInputChange}
             />
           </div>
-          <div className="column">
+          <div className="column-filter-field">
             <div className="search-text">
               <p>สิทธิ์การใช้งาน</p>
             </div>
@@ -77,7 +77,7 @@ const UserFiltering = () => {
               </Select>
             </FormControl>
           </div>
-          <div className="column">
+          <div className="column-filter-field">
             <div className="search-text">
               <p>หน่วยงาน</p>
             </div>
@@ -95,7 +95,7 @@ const UserFiltering = () => {
               </Select>
             </FormControl>
           </div>
-          <div className="column">
+          <div className="column-filter-field">
             <div className="search-text">
               <p>สถานะ</p>
             </div>
@@ -114,18 +114,20 @@ const UserFiltering = () => {
             </FormControl>
           </div>
           <div className="column-button">
+            <br/>
             <Button
               variant="contained"
-              className="button"
+              className="button-search-clear"
               style={{ backgroundColor: "#098484" }}
             >
               ค้นหา
             </Button>
           </div>
           <div className="column-button">
+          <br/>
             <Button
               variant="outlined"
-              className="button"
+              className="button-search-clear"
               style={{ backgroundColor: "#7A8688", color: "white" }}
             >
               ล้างการค้นหา

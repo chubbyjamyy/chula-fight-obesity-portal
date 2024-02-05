@@ -6,15 +6,15 @@ import "./Footer.css";
 const Footer: React.FC = () => {
   return (
     <div className="footer">
-      <div className="column">
+      <div className="column-footer">
         <div className="container">
           <img src={Vector} alt="Image Alt Text" className="icon" />
           <p className="text">ศูนย์รักษ์พุง โรงพยาบาลจุฬาลงกรณ์</p>
         </div>
-        <p>อาคาร ส.ธ. ชั้น 12 เลขที่ 1873 ถนนพระราม 4</p>
-        <p>แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร</p>
+        <p className="address-text">อาคาร ส.ธ. ชั้น 12 เลขที่ 1873 ถนนพระราม 4</p>
+        <p className="address-text">แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร</p>
       </div>
-      <div className="column">
+      <div className="column-footer">
         <div className="row">
           <div className="container2">
             <img src={telephone} alt="Image Alt Text" className="iconTel" />

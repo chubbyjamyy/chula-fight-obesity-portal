@@ -10,7 +10,7 @@
     /* Adjust alignment as needed */
 }
 
-.column {
+.column-filter-field {
     flex: 1;
     margin: 0 5px;
     padding-left: 0px;
@@ -18,14 +18,14 @@
     /* Adjust margin between columns as needed */
 }
 
-.column .MuiTextField-root {
+.column-filter-field .MuiTextField-root {
     width: 100%;
     /* Set the TextField to take 100% of its container width */
     min-width: 250px;
     /* Adjust the minimum width of the TextField as needed */
 }
 
-.column .MuiFormControl-root {
+.column-filter-field .MuiFormControl-root {
     width: 100%;
     /* Set the FormControl to take 100% of its container width */
     min-width: 250px;
@@ -38,10 +38,10 @@
     /* Vertical center alignment */
 }
 
-.button{
+.button-search-clear{
     font-size: 16px;
     /* Increase the font-size as needed */
-    width: 140px;
+    width: 145px;
     height: 50px;
 }
 
@@ -83,5 +83,6 @@
     /* Adjust the minimum width of the button as needed */
     margin-top: 40px;
     /* Adjust the margin-top as needed for spacing */
+    padding-left: 20px;
 }
 
