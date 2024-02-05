@@ -3,7 +3,7 @@ import { Tabs, Tab, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import DashBoard from '../asset/Dashboard.png'
-import Info from '../asset/Info.png'
+import UserPermission from '../asset/UserPermission.png'
 
 // Import other icons as needed
 
@@ -21,18 +21,15 @@ const VerticalTab = () => {
       };
   
     const tabStyles = {
-        display: 'flex',
-        alignItems: 'center',
-        left: 0,
-        top:0
+        width: '100px',
       };
     
       const imageStyles = {
-        width :'75px'// Adjust the margin as needed
+        width :'100px'// Adjust the margin as needed
       };
     
     return (
-      <Box display="flex">
+      <Box display="flex" style={tabStyles}>
         {/* Vertical Tab Menu */}
         <Tabs
           orientation="vertical"
@@ -54,11 +51,11 @@ const VerticalTab = () => {
           <Tab
           label={
             <div>
-              <img src={Info} alt="Info" style={imageStyles} />
+              <img src={UserPermission} alt="UserAndPermission" style={imageStyles} />
             </div>
           }
           component={Link}
-          to="/dashboard"
+          to="/userPermission"
         />
           {/* Add more tabs as needed */}
         </Tabs>

@@ -12,6 +12,8 @@ import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import COSLogo from '../asset/COSLogo.png'
+import COS from '../asset/COS.png'
+import { Padding } from '@mui/icons-material';
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
@@ -38,15 +40,17 @@ export default function MenuAppBar() {
   };
 
   const logoStyles = {
-    maxHeight: '50px', // Adjust the maximum height as needed
-    maxWidth: '120px', // Adjust the maximum width as needed
+    maxHeight: '95px', // Adjust the maximum height as needed
+    maxWidth: '80px', // Adjust the maximum width as needed
+    flex: '1',
+    left: '0',
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <AppBar position="static" sx={{ backgroundColor }}>
         <Toolbar>
-          <img src={COSLogo} alt="COS Logo" style={logoStyles} /> {/* Apply the logo styles */}
+          <img src={COS} alt="COS Logo" style={logoStyles} /> {/* Apply the logo styles */}
           <IconButton
             size="large"
             edge="start"

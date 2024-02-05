@@ -1,0 +1,14 @@
+.user-permission-content {
+  display: flex;
+  flex-grow: 1;
+  background-color: lightgray; /* Allow content to take up available space */
+}
+
+
+.user-filtering-container {
+  flex-grow: 1; /* Allow UserFiltering to take up available space */
+  padding: 50px;
+  width: 50%;
+  height: 29%;/* Add padding to create space around UserFiltering */
+}
+

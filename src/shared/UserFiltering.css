@@ -1,0 +1,44 @@
+.user-filtering-container {
+    padding-top: 30px;
+    /* Add top padding between UserFiltering and MenuAppBar */
+}
+
+/* YourComponent.css */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    /* Vertical center alignment */
+}
+
+.search-text {
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+}
+
+/* Additional styling for the InfoIcon if necessary */
+.info-icon img {
+    width: 18px;
+    /* Adjust the width as needed */
+    height: 18px;
+    /* Adjust the height as needed */
+}
+
+/* UserFiltering.css */
+
+.dropdown-container {
+    margin-top: 20px;
+    /* Adjust the margin as needed */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+}
+
+/* Adjust margin or spacing between elements as needed */
+.input-container>* {
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+}
