@@ -4,6 +4,31 @@
 }
 
 /* YourComponent.css */
+.two-column-container {
+    display: flex;
+    justify-content: space-between;
+    /* Adjust alignment as needed */
+}
+
+.column {
+    flex: 1;
+    margin: 0 5px;
+    padding-left: 0px;
+    /* Adjust the minimum width as needed */
+    /* Adjust margin between columns as needed */
+}
+
+.column .MuiTextField-root {
+    width: 100%;
+    /* Set the TextField to take 100% of its container width */
+    min-width: 250px;
+    /* Adjust the minimum width of the TextField as needed */
+}
+
+.column .MuiFormControl-root {
+    width: 100%; /* Set the FormControl to take 100% of its container width */
+    min-width: 250px; /* Adjust the minimum width of the FormControl as needed */
+  }
 
 .search-container {
     display: flex;
@@ -12,7 +37,7 @@
 }
 
 .search-text {
-    margin-right: 10px;
+    /* margin-right: 10px; */
     /* Adjust the margin as needed */
 }
 
@@ -21,6 +46,7 @@
     width: 18px;
     /* Adjust the width as needed */
     height: 18px;
+    padding-left: 5px;
     /* Adjust the height as needed */
 }
 
