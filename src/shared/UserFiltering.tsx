@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { TextField, MenuItem, Select, FormControl, Box, InputLabel } from "@mui/material";
+import {
+  TextField,
+  MenuItem,
+  Select,
+  FormControl,
+  Box,
+  InputLabel,
+  Button,
+} from "@mui/material";
 import InfoIcon from "../asset/InfoIcon.png";
 import "./UserFiltering.css"; // Import a CSS file for styling
 
@@ -32,81 +40,100 @@ const UserFiltering = () => {
 
   return (
     <div>
-    <Box p={3} bgcolor={"white"}>
-      <div className="two-column-container">
-        <div className="column">
-          <div className="search-container">
+      <p>ผู้ใช้งานและสิทธิ์  /  รายการผู้ใช้งาน</p>
+      <Box p={3} bgcolor={"white"}>
+        <div className="two-column-container">
+          <div className="column">
+            <div className="search-container">
+              <div className="search-text">
+                <p>ค้นหา</p>
+              </div>
+              <div className="info-icon">
+                <img src={InfoIcon} alt="Info Icon" />
+              </div>
+            </div>
+            <TextField
+              label="-- ระบุคำที่ต้องการค้นหา --"
+              variant="outlined"
+              value={textInput}
+              onChange={handleTextInputChange}
+            />
+          </div>
+          <div className="column">
             <div className="search-text">
-              <p>ค้นหา</p>
+              <p>สิทธิ์การใช้งาน</p>
             </div>
-            <div className="info-icon">
-              <img src={InfoIcon} alt="Info Icon" />
+            <FormControl variant="outlined">
+              <InputLabel>-- เลือกสิทธิ์การใช้งาน --</InputLabel>
+              <Select
+                label="Regular Dropdown"
+                value={dropdownValue}
+                onChange={handleDropdownChange}
+              >
+                <MenuItem value="">Select an option</MenuItem>
+                <MenuItem value="option1">Option 1</MenuItem>
+                <MenuItem value="option2">Option 2</MenuItem>
+                <MenuItem value="option3">Option 3</MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+          <div className="column">
+            <div className="search-text">
+              <p>หน่วยงาน</p>
             </div>
+            <FormControl variant="outlined">
+              <InputLabel>-- เลือกหน่วยงาน/บริษัท --</InputLabel>
+              <Select
+                label="Regular Dropdown"
+                value={dropdownValue}
+                onChange={handleDropdownChange}
+              >
+                <MenuItem value="">Select an option</MenuItem>
+                <MenuItem value="option1">Option 1</MenuItem>
+                <MenuItem value="option2">Option 2</MenuItem>
+                <MenuItem value="option3">Option 3</MenuItem>
+              </Select>
+            </FormControl>
           </div>
-          <TextField
-            label="-- ระบุคำที่ต้องการค้นหา --"
-            variant="outlined"
-            value={textInput}
-            onChange={handleTextInputChange}
-          />
-        </div>
-        <div className="column">
-          <div className="search-text">
-            <p>สิทธิ์การใช้งาน</p>
+          <div className="column">
+            <div className="search-text">
+              <p>สถานะ</p>
+            </div>
+            <FormControl variant="outlined">
+              <InputLabel>-- เลือกสถานะ --</InputLabel>
+              <Select
+                label="Regular Dropdown"
+                value={dropdownValue}
+                onChange={handleDropdownChange}
+              >
+                <MenuItem value="">Select an option</MenuItem>
+                <MenuItem value="option1">Option 1</MenuItem>
+                <MenuItem value="option2">Option 2</MenuItem>
+                <MenuItem value="option3">Option 3</MenuItem>
+              </Select>
+            </FormControl>
           </div>
-          <FormControl variant="outlined">
-          <InputLabel>-- เลือกสิทธิ์การใช้งาน --</InputLabel>
-            <Select
-              label="Regular Dropdown"
-              value={dropdownValue}
-              onChange={handleDropdownChange}
+          <div className="column-button">
+            <Button
+              variant="contained"
+              className="button"
+              style={{ backgroundColor: "#098484" }}
             >
-              <MenuItem value="">Select an option</MenuItem>
-              <MenuItem value="option1">Option 1</MenuItem>
-              <MenuItem value="option2">Option 2</MenuItem>
-              <MenuItem value="option3">Option 3</MenuItem>
-            </Select>
-          </FormControl>
-        </div>
-        <div className="column">
-          <div className="search-text">
-            <p>หน่วยงาน</p>
+              ค้นหา
+            </Button>
           </div>
-          <FormControl variant="outlined">
-          <InputLabel>-- เลือกหน่วยงาน/บริษัท --</InputLabel>
-            <Select
-              label="Regular Dropdown"
-              value={dropdownValue}
-              onChange={handleDropdownChange}
+          <div className="column-button">
+            <Button
+              variant="outlined"
+              className="button"
+              style={{ backgroundColor: "#7A8688", color: "white" }}
             >
-              <MenuItem value="">Select an option</MenuItem>
-              <MenuItem value="option1">Option 1</MenuItem>
-              <MenuItem value="option2">Option 2</MenuItem>
-              <MenuItem value="option3">Option 3</MenuItem>
-            </Select>
-          </FormControl>
-        </div>
-        <div className="column">
-          <div className="search-text">
-            <p>สถานะ</p>
+              ล้างการค้นหา
+            </Button>
           </div>
-          <FormControl variant="outlined">
-          <InputLabel>-- เลือกสถานะ --</InputLabel>
-            <Select
-              label="Regular Dropdown"
-              value={dropdownValue}
-              onChange={handleDropdownChange}
-            >
-              <MenuItem value="">Select an option</MenuItem>
-              <MenuItem value="option1">Option 1</MenuItem>
-              <MenuItem value="option2">Option 2</MenuItem>
-              <MenuItem value="option3">Option 3</MenuItem>
-            </Select>
-          </FormControl>
         </div>
-      </div>
-    </Box>
-  </div>
+      </Box>
+    </div>
   );
 };
 
