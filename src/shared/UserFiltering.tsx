@@ -40,7 +40,7 @@ const UserFiltering = () => {
 
   return (
     <div>
-      <p>ผู้ใช้งานและสิทธิ์  /  รายการผู้ใช้งาน</p>
+      <p>ผู้ใช้งานและสิทธิ์ / รายการผู้ใช้งาน</p>
       <Box p={3} bgcolor={"white"}>
         <div className="two-column-container">
           <div className="column-filter-field">
@@ -113,25 +113,24 @@ const UserFiltering = () => {
               </Select>
             </FormControl>
           </div>
-          <div className="column-button">
-            <br/>
-            <Button
-              variant="contained"
-              className="button-search-clear"
-              style={{ backgroundColor: "#098484" }}
-            >
-              ค้นหา
-            </Button>
-          </div>
-          <div className="column-button">
-          <br/>
-            <Button
-              variant="outlined"
-              className="button-search-clear"
-              style={{ backgroundColor: "#7A8688", color: "white" }}
-            >
-              ล้างการค้นหา
-            </Button>
+          <div className="row">
+            <div className="column-button">
+              <br />
+              <Button
+                variant="contained"
+                className="button-search-clear"
+                style={{ backgroundColor: "#098484", marginRight: "20px" }}
+              >
+                ค้นหา
+              </Button>
+              <Button
+                variant="outlined"
+                className="button-search-clear"
+                style={{ backgroundColor: "#7A8688", color: "white" }}
+              >
+                ล้างการค้นหา
+              </Button>
+              </div>   
           </div>
         </div>
       </Box>

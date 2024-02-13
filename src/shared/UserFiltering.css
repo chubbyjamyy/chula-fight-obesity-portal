@@ -41,8 +41,10 @@
 .button-search-clear{
     font-size: 16px;
     /* Increase the font-size as needed */
-    width: 145px;
+    width: 120px;
     height: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .search-text {
@@ -83,6 +85,6 @@
     /* Adjust the minimum width of the button as needed */
     margin-top: 40px;
     /* Adjust the margin-top as needed for spacing */
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
