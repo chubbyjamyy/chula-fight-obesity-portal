@@ -1,14 +1,8 @@
-.user-permission-content {
-  display: flex;
-  flex-grow: 1;
-  background-color: lightgray; /* Allow content to take up available space */
+.grant-permission-button {
+    font-size: 16px;
+    /* Increase the font-size as needed */
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
 }
-
-
-.user-filtering-container {
-  flex-grow: 1; /* Allow UserFiltering to take up available space */
-  padding: 20px;
-  width: 50%;
-  height: 29%;/* Add padding to create space around UserFiltering */
-}
-

@@ -1,44 +1,65 @@
-import React from 'react';
-import { Tabs, Tab, Box } from '@mui/material';
-import { Link } from 'react-router-dom';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import DashBoard from '../asset/Dashboard.png'
-import UserPermission from '../asset/UserPermission.png'
+import React, { useState } from "react";
+import { Tabs, Tab, Box, Menu, MenuItem } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
+import DashBoard from "../asset/Dashboard.png";
+import UserPermission from "../asset/UserPermission.png";
 
-// Import other icons as needed
-
+enum Routes {
+  USER_TAB = 'userTab',
+  USER_PERMISSION = 'userPermission',
+}
 
 const VerticalTab = () => {
-    const [value, setValue] = React.useState(0);
-  
-    const handleChange = (event: any, newValue: React.SetStateAction<number>) => {
-      setValue(newValue);
-    };
+  const navigate = useNavigate();
+  const [value, setValue] = useState(0);
+  const [anchorEl, setAnchorEl] = useState(null);
 
-    const backgroundColor = {
-        backgroundColor: '#098484',
-        height: '100vh' // Set the background color to green
-      };
-  
-    const tabStyles = {
-        width: '100px',
-      };
-    
-      const imageStyles = {
-        width :'100px'// Adjust the margin as needed
-      };
-    
-    return (
-      <Box display="flex" style={tabStyles}>
-        {/* Vertical Tab Menu */}
-        <Tabs
-          orientation="vertical"
-          variant="scrollable"
-          value={value}
-          onChange={handleChange}
-          sx={backgroundColor}
-        >
-           <Tab
+  const handleChange = (event: any, newValue: number) => {
+    console.log("value ==",newValue);
+    setValue(newValue);
+  };
+
+  const handleClick = (event: any) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = (route?: Routes) => {
+    setAnchorEl(null);
+    if (route) {
+      navigate(`/${route}`);
+    }
+  };
+
+  const backgroundColor = {
+    backgroundColor: "#F8E1EA",
+    height: "100vh",
+  };
+
+  const tabStyles = {
+    width: "100px",
+  };
+
+  const imageStyles = {
+    width: "100px",
+  };
+
+  const menuItems = [
+    { label: 'จัดการผู้ใช้งาน', route: Routes.USER_TAB },
+    { label: 'อนุมัติผู้ใช้งาน' },
+    { label: 'จัดการสิทธิ์การใช้งาน', route: Routes.USER_PERMISSION },
+    { label: 'ประวัติการใช้งานในระบบ' },
+  ];
+
+  return (
+    <Box display="flex" style={tabStyles}>
+      <Tabs
+        orientation="vertical"
+        variant="scrollable"
+        value={value}
+        onChange={handleChange}
+        sx={backgroundColor}
+      >
+        <Tab
           label={
             <div>
               <img src={DashBoard} alt="Dashboard" style={imageStyles} />
@@ -47,21 +68,34 @@ const VerticalTab = () => {
           component={Link}
           to="/dashboard"
         />
-          
-          <Tab
+        <Tab
           label={
             <div>
-              <img src={UserPermission} alt="UserAndPermission" style={imageStyles} />
+              <img
+                src={UserPermission}
+                alt="UserAndPermission"
+                style={imageStyles}
+              />
             </div>
           }
-          component={Link}
-          to="/userPermission"
+          onClick={handleClick}
         />
-          {/* Add more tabs as needed */}
-        </Tabs>
-      </Box>
-    );
-  };
-  
-  export default VerticalTab;
-  
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          anchorOrigin={{ vertical: 'center', horizontal: 'center' }}
+        >
+          {menuItems.map((item) => (
+            <MenuItem key={item.label} onClick={() => handleClose(item.route)}>
+              {item.label}
+            </MenuItem>
+          ))}
+        </Menu>
+      </Tabs>
+    </Box>
+  );
+};
+
+export default VerticalTab;

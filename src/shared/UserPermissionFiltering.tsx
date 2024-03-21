@@ -11,7 +11,7 @@ import {
 import InfoIcon from "../asset/InfoIcon.png";
 import "./UserFiltering.css"; // Import a CSS file for styling
 
-const UserFiltering = () => {
+const UserPermissionFiltering = () => {
   // State for storing the values of the three filter fields
   const [textInput, setTextInput] = useState("");
   const [dropdownValue, setDropdownValue] = useState("");
@@ -42,47 +42,18 @@ const UserFiltering = () => {
     <div>
       <p>ผู้ใช้งานและสิทธิ์ / รายการผู้ใช้งาน</p>
       <Box p={3} bgcolor={"white"}>
+        <p style={{ borderBottom: "1px solid grey" }}>
+          <span style={{ borderBottom: "5px solid #DF5C8E" }}>
+            รายการสิทธิ์การใช้งาน
+          </span>
+        </p>
         <div className="two-column-container">
           <div className="column-filter-field">
-            <div className="search-container">
-              <div className="search-text">
-                <p>ค้นหา</p>
-              </div>
-              <div className="info-icon">
-                <img src={InfoIcon} alt="Info Icon" />
-              </div>
-            </div>
-            <TextField
-              label="-- ระบุคำที่ต้องการค้นหา --"
-              variant="outlined"
-              value={textInput}
-              onChange={handleTextInputChange}
-            />
-          </div>
-          <div className="column-filter-field">
             <div className="search-text">
-              <p>สิทธิ์การใช้งาน</p>
+              <p>ประเภทสิทธิ์การใช้งาน</p>
             </div>
             <FormControl variant="outlined">
-              <InputLabel>-- เลือกสิทธิ์การใช้งาน --</InputLabel>
-              <Select
-                label="Regular Dropdown"
-                value={dropdownValue}
-                onChange={handleDropdownChange}
-              >
-                <MenuItem value="">Select an option</MenuItem>
-                <MenuItem value="option1">Option 1</MenuItem>
-                <MenuItem value="option2">Option 2</MenuItem>
-                <MenuItem value="option3">Option 3</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="column-filter-field">
-            <div className="search-text">
-              <p>หน่วยงาน</p>
-            </div>
-            <FormControl variant="outlined">
-              <InputLabel>-- เลือกหน่วยงาน/บริษัท --</InputLabel>
+              <InputLabel>-- เลือกประเภทสิทธิ์การใช้งาน --</InputLabel>
               <Select
                 label="Regular Dropdown"
                 value={dropdownValue}
@@ -113,6 +84,19 @@ const UserFiltering = () => {
               </Select>
             </FormControl>
           </div>
+          <div className="column-filter-field">
+            <div className="search-container">
+              <div className="search-text">
+                <p>ค้นหา ชื่อสิทธิ์การใช้งาน</p>
+              </div>
+            </div>
+            <TextField
+              label="-- ระบุคำที่ต้องการค้นหา --"
+              variant="outlined"
+              value={textInput}
+              onChange={handleTextInputChange}
+            />
+          </div>
           <div className="row">
             <div className="column-button">
               <br />
@@ -130,7 +114,7 @@ const UserFiltering = () => {
               >
                 ล้างการค้นหา
               </Button>
-              </div>   
+            </div>
           </div>
         </div>
       </Box>
@@ -138,4 +122,4 @@ const UserFiltering = () => {
   );
 };
 
-export default UserFiltering;
+export default UserPermissionFiltering;

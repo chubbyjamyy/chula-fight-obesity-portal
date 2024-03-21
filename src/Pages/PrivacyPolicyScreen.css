@@ -1,0 +1,8 @@
+.privacy-policy-container {
+    background-image: url('../asset/HomeScreen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /* Use min-height to ensure the background covers the full screen */
+    overflow: hidden; 
+  }
