@@ -59,10 +59,10 @@ const UserPermissionFiltering = () => {
                 value={dropdownValue}
                 onChange={handleDropdownChange}
               >
-                <MenuItem value="">Select an option</MenuItem>
-                <MenuItem value="option1">Option 1</MenuItem>
-                <MenuItem value="option2">Option 2</MenuItem>
-                <MenuItem value="option3">Option 3</MenuItem>
+                <MenuItem value="option1">แพทย์ (จุฬา)</MenuItem>
+                <MenuItem value="option2">แพทย์ (สังกัดอื่น)</MenuItem>
+                <MenuItem value="option3">เจ้าหน้าที่</MenuItem>
+                <MenuItem value="option4">ผู้ดูแลระบบ</MenuItem>
               </Select>
             </FormControl>
           </div>
@@ -77,10 +77,8 @@ const UserPermissionFiltering = () => {
                 value={dropdownValue}
                 onChange={handleDropdownChange}
               >
-                <MenuItem value="">Select an option</MenuItem>
-                <MenuItem value="option1">Option 1</MenuItem>
-                <MenuItem value="option2">Option 2</MenuItem>
-                <MenuItem value="option3">Option 3</MenuItem>
+                <MenuItem value="">ใช้งานได้</MenuItem>
+                <MenuItem value="option1">ปิดการใช้งาน</MenuItem>
               </Select>
             </FormControl>
           </div>

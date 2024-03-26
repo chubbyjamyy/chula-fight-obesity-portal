@@ -70,19 +70,19 @@ const UserFiltering = () => {
                 value={dropdownValue}
                 onChange={handleDropdownChange}
               >
-                <MenuItem value="">Select an option</MenuItem>
-                <MenuItem value="option1">Option 1</MenuItem>
-                <MenuItem value="option2">Option 2</MenuItem>
-                <MenuItem value="option3">Option 3</MenuItem>
+                <MenuItem value="option1">แพทย์ (จุฬา)</MenuItem>
+                <MenuItem value="option2">แพทย์ (สังกัดอื่น)</MenuItem>
+                <MenuItem value="option3">เจ้าหน้าที่</MenuItem>
+                <MenuItem value="option4">ผู้ดูแลระบบ</MenuItem>
               </Select>
             </FormControl>
           </div>
           <div className="column-filter-field">
             <div className="search-text">
-              <p>หน่วยงาน</p>
+              <p>สังกัด</p>
             </div>
             <FormControl variant="outlined">
-              <InputLabel>-- เลือกหน่วยงาน/บริษัท --</InputLabel>
+              <InputLabel>-- เลือกสังกัด --</InputLabel>
               <Select
                 label="Regular Dropdown"
                 value={dropdownValue}
@@ -106,10 +106,8 @@ const UserFiltering = () => {
                 value={dropdownValue}
                 onChange={handleDropdownChange}
               >
-                <MenuItem value="">Select an option</MenuItem>
-                <MenuItem value="option1">Option 1</MenuItem>
-                <MenuItem value="option2">Option 2</MenuItem>
-                <MenuItem value="option3">Option 3</MenuItem>
+                <MenuItem value="">ใช้งานได้</MenuItem>
+                <MenuItem value="option1">ปิดการใช้งาน</MenuItem>
               </Select>
             </FormControl>
           </div>
@@ -130,7 +128,7 @@ const UserFiltering = () => {
               >
                 ล้างการค้นหา
               </Button>
-              </div>   
+            </div>
           </div>
         </div>
       </Box>

@@ -32,7 +32,7 @@ const VerticalTab = () => {
 
   const backgroundColor = {
     backgroundColor: "#F8E1EA",
-    height: "100vh",
+    height: "105vh",
   };
 
   const tabStyles = {

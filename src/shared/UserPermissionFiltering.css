@@ -21,14 +21,14 @@
 .column-filter-field .MuiTextField-root {
     width: 100%;
     /* Set the TextField to take 100% of its container width */
-    min-width: 250px;
+    min-width: 300px;
     /* Adjust the minimum width of the TextField as needed */
 }
 
 .column-filter-field .MuiFormControl-root {
     width: 100%;
     /* Set the FormControl to take 100% of its container width */
-    min-width: 250px;
+    min-width: 300px;
     /* Adjust the minimum width of the FormControl as needed */
 }
 
